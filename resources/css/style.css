@@ -37,6 +37,8 @@ html {
 
 header {
   position: fixed;
+  display: flex;
+  align-items: center;
   width: 100%;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
@@ -47,6 +49,8 @@ header {
 header .content {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
   padding: 1.875rem 1rem 1.875rem 1.875rem;
 }
 
@@ -89,9 +93,13 @@ header .button {
   header .button {
     display: block;
   }
+
+  header {
+    height: 65px;
+  }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 630px) {
   header .desktop {
     display: none;
   }
@@ -236,14 +244,16 @@ header .button {
   flex: 1, 1;
   margin: 0px 1.25rem;
   background-color: white;
-  height: 571px;
+  min-height: 60%;
   padding: 2rem;
   width: 50%;
+  display: flex;
+  flex-direction: column;
 }
 
 .feature .image-container {
   width: 100%;
-  height: 65%;
+  max-height: 65%;
 }
 
 .feature img {
@@ -252,7 +262,7 @@ header .button {
 }
 
 .feature .content {
-  padding: 20px 0 40px 0;
+  padding: 20px 0 20px 0;
   text-align: center;
   height: 25%;
   display: flex;
@@ -275,7 +285,23 @@ header .button {
 }
 
 @media only screen and (max-width: 890px) {
+  .feature {
+    padding: 1rem;
+  }
+
   .feature h2 {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .feature h2,
+  .feature h3 {
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+   .feature h2 {
     font-size: 1.125rem;
     line-height: 1.3;
     font-weight: normal;
@@ -285,17 +311,32 @@ header .button {
     font-size: .875rem;
     line-height: 1.4;
   }
-}
 
-@media only screen and (max-width: 760px) {
   #features-section {
     flex-flow: column;
+    align-items: center;
+    margin: 0;
+    padding: 1rem 0;
+  }
+
+  .feature {
+    margin: 1rem 0;
+    padding: 1.25rem 1rem 0 1rem;
+    height: 50%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #features-section {
+    width: 100%;
     padding: 0;
   }
 
   .feature {
-    margin: 0;
     padding: 1.25rem 1rem 0 1rem;
+    margin: 0;
+    height: 50%;
+    width: 92%;
   }
 }
 
@@ -344,6 +385,20 @@ header .button {
 
 @media only screen and (max-width: 760px) {
   #filters-section {
+    padding: 4rem 0 0 0;
+  }
+
+  #filters-section .content {
+    margin-bottom: 3.5rem;
+  }
+
+  #filters-section .images-container {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #filters-section {
     padding: 1.5rem 0 0 0;
   }
 
@@ -365,6 +420,8 @@ header .button {
 
   #filters-section .images-container {
     padding: 0;
+    margin: 0 auto;
+    width: 100%;
   }
 
   #filters-section .extra {
@@ -399,21 +456,31 @@ header .button {
 
 #quotes-section .quote-citation {
   height: 1.875rem;
+  padding-top: 0;
 }
 
 @media only screen and (max-width: 760px) {
   #quotes-section .content {
+    padding: 3rem 1.5rem;
+  }
+
+  #quotes-section .quote {
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #quotes-section .content {
     padding: 1.875rem .625rem;
   }
 
-  #quotes-section quote {
+  #quotes-section .quote {
     font-size: 1.5rem;
     line-height: 1.4;
   }
 
   #quotes-section .quote-citation {
     display: block;
-    padding-top: 1rem;
     margin: auto;
   }
 }
@@ -435,7 +502,7 @@ footer .copyright {
   flex-grow: 1;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 450px) {
   footer .content {
     font-size: .625rem;
   }
