@@ -106,7 +106,7 @@ header .button {
 
   header .mobile {
     display: block;
-    width: 100%;
+    width: 72%;
   }
 
   header .content {
@@ -122,6 +122,18 @@ header .button {
 
   header .mobile li {
     padding: 0;
+  }
+
+  header .button {
+    padding: 3px .5rem;
+    border-radius: 4px;
+    margin-right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  header {
+    height: 3rem;
   }
 }
 
@@ -228,6 +240,10 @@ header .button {
 
   #sign-up-cta h2 {
     font-size: 2rem;
+  }
+
+  #sign-up-cta {
+    padding: 0;
   }
 }
 
@@ -404,6 +420,8 @@ header .button {
 
   #filters-section .content {
     margin-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   #filters-section .content h2 {
@@ -421,7 +439,12 @@ header .button {
   #filters-section .images-container {
     padding: 0;
     margin: 0 auto;
+    justify-content: center;
     width: 100%;
+  }
+
+  #filters-section .image-container {
+    width: 33.3%;
   }
 
   #filters-section .extra {
@@ -457,6 +480,7 @@ header .button {
 #quotes-section .quote-citation {
   height: 1.875rem;
   padding-top: 0;
+  padding-right: 2rem;
 }
 
 @media only screen and (max-width: 760px) {
@@ -467,9 +491,18 @@ header .button {
   #quotes-section .quote {
     text-align: left;
   }
+
+  #quotes-section .quote-citation {
+    padding-right: 0;
+  }
 }
 
 @media only screen and (max-width: 450px) {
+  #quotes-section .content.center {
+  display: block;
+  padding: 0;
+  }
+
   #quotes-section .content {
     padding: 1.875rem .625rem;
   }
@@ -477,11 +510,17 @@ header .button {
   #quotes-section .quote {
     font-size: 1.5rem;
     line-height: 1.4;
+    text-align: justify;
+    padding-bottom: 2rem;
   }
 
   #quotes-section .quote-citation {
     display: block;
-    margin: auto;
+    margin: 1rem auto;
+  }
+
+  #quotes-section {
+    padding: 2.5rem 1.8rem 1.5rem 1.8rem;
   }
 }
 
@@ -505,5 +544,9 @@ footer .copyright {
 @media only screen and (max-width: 450px) {
   footer .content {
     font-size: .625rem;
+  }
+
+  footer {
+    padding: 1.5rem 1rem;
   }
 }
